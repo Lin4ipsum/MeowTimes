@@ -9,5 +9,20 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require pure/buttons-core
+ *= require pure/buttons
+ *= require pure/grid-r
+ *= require pure/grids-core
+ *= require pure/grids-units
+ *= require pure/menu-core
+ *= require pure/menu-paginator
+ *= require pure/menus-r
+ *= require pure/menus
+ *= require pure/normalize-context
+ *= require pure/tables
  *= require_tree .
  */
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One|Graduate);
