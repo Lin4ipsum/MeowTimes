@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   
   def index
-    @artciles = SearchHelper::Reddit::getArticles
+    @articles = SearchHelper::Reddit::getArticles
 
     respond_to do |format|
       format.html

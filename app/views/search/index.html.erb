@@ -15,8 +15,10 @@
       </div>
 
       <div class="l-box">
-        <ul>
-       
+        <ul class="articles">
+          <% @articles.each do |x| %>
+            <li><img src="<%= x.thumbnail %>"><%= x.title %></li>
+          <% end %>
         </ul>
       </div>
 

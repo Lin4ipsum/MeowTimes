@@ -48,6 +48,10 @@ div#main.pure-u  {
   text-align: left;
 }
 
+.articles {
+  list-style-type: none;
+}
+
 /* Add transition to containers so they can push in and out */
 #layout, #menu, .pure-menu-link {
     -webkit-transition: all 0.2s ease-out;
