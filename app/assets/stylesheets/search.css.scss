@@ -148,15 +148,7 @@ dd {
          color: #ccc;
      }
 
-aside {
-    background: #cce1ef; /* normal color palette when primary color palette is at #1f8dd6 */
-    padding: 0.3em 1em;
-    border-radius: 3px;
-    color: #163246; /* block-normal-text-high */
-}
-    .aside a, .aside a:visited {
-        color: #1f8dd6;
-    }
+
 
  /* --------------------------
   * Content Module Styles
@@ -167,7 +159,7 @@ aside {
 .content {
     margin: 0 auto;
     width: 70%;
-    margin-bottom:50px;
+    margin-bottom: 100px;
 }
     .content p {
         line-height: 1.6em;
