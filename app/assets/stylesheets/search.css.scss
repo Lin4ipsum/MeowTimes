@@ -34,31 +34,18 @@ div#main.pure-u  {
   position:relative;
 }
 
-#github {
-  @include bottom-margin;
-}
-
-.github-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 9.6em;
-}
-
-.experience {
-  padding: 0;
-}
-
-.octocat {
-  display: block;
-  height: 20%;
-  margin: 15px auto;
-  width: 20%;
-}
-
-
 .l-box ul li {
   margin: 5px;
+}
+
+.sub-header {
+  margin: 0;
+  margin-left: 200px;
+}
+
+.top-stories {
+  font-size: 22px;
+  text-align: left;
 }
 
 /* Add transition to containers so they can push in and out */
@@ -80,17 +67,6 @@ h1,h2,h3,h4,h5,h6 {
     color: rgb(75, 75, 75);
 }
 
-a {
-  text-decoration: none;
-}
-
-// a:visited {
-//     color: #999 // #265778; /* block-normal-text-normal */
-// }
-
-.back-to-top {
-  text-align: right;
-}
 
 a.scroll-up {
   background: inherit;
@@ -358,7 +334,7 @@ aside {
 
 .bottom-decoration {
   display: block;
-  height: 2px;
+  height: 6px;
   width: 100%;
 }
 
@@ -753,7 +729,7 @@ pre .string, pre .support.value  {
 }
 
 .footer {
-  background: #666;
+  background: gray;
   bottom: 0;
   color: white;
   height: $footer-height;
