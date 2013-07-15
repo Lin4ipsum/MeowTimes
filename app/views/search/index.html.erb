@@ -18,8 +18,8 @@
         <ul class="articles">
           <% @articles.each do |x| %>
             <div class="articles-subclass">
-              <img src="<%= x.thumbnail %>">
-              <div class="article-title"><%= x.title %></div>
+              <a href="<%= x.article_url %>"><img src="<%= x.thumbnail %>">
+              <div class="article-title"><%= x.title %></div></a>
             </div>
           <% end %>
         </ul>

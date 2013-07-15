@@ -30,7 +30,8 @@ module SearchHelper
       self.json_children.each do |child|
         title = child["data"]["title"]
         thumbnail = child["data"]["thumbnail"]
-        list_of_articles << Article.new(title, thumbnail)
+        article_url = "http://www.reddit.com#{child["data"]["permalink"]}"
+        list_of_articles << Article.new(title, thumbnail, article_url)
       end
       list_of_articles
     end
