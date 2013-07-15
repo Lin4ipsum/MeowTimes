@@ -17,7 +17,10 @@
       <div class="l-box">
         <ul class="articles">
           <% @articles.each do |x| %>
-            <li><img src="<%= x.thumbnail %>"><%= x.title %></li>
+            <div class="articles-subclass">
+              <img src="<%= x.thumbnail %>">
+              <div class="article-title"><%= x.title %></div>
+            </div>
           <% end %>
         </ul>
       </div>

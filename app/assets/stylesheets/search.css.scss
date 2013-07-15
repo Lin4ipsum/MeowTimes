@@ -38,6 +38,14 @@ div#main.pure-u  {
   margin: 5px;
 }
 
+.blue {
+  background: #0e90d2;
+}
+
+.orange {
+  background: $orange;
+}
+
 .sub-header {
   margin: 0;
   margin-left: 200px;
@@ -52,273 +60,23 @@ div#main.pure-u  {
   list-style-type: none;
 }
 
-/* Add transition to containers so they can push in and out */
-#layout, #menu, .pure-menu-link {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+.articles-subclass {
+  padding: 10px;
+  vertical-align: top;
+} 
+
+.articles-subclass img {
+  background: gray;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 70px;
+  vertical-align: top;
 }
 
-/* --------------------------
- * Element Styles
- * --------------------------
-*/
-
-h1,h2,h3,h4,h5,h6 {
-    font-weight: bold;
-    color: rgb(75, 75, 75);
-}
-
-
-a.scroll-up {
-  background: inherit;
-  border:  1px solid #ddd;
-  border-radius:  .25em;
-  color: #999;
-  padding: .25em .5em;
-  &:hover,  {
-    background: #0078E7;
-    color: #fff;
-    transition: .25s;
-  }
-
-
-}
-
-dt {
-    font-weight: bold;
-}
-dd {
-    margin: 0 0 10px 0;
-}
-
-/* --------------------------
- * Layout Styles
- * --------------------------
-*/
-
-#layout {
-  padding-left: 150px; /* left col width "#menu" */
-  left: 0;
-}
-
-#main {
-  margin-bottom: $footer-height;
-  width: 100%;
-}
-
-
-/* Apply the .box class on the immediate parent of any grid element (pure-u-*) to apply some padding. */
-.l-box {
-    padding: 1.3em;
-}
-
-.l-vbox {
-    padding: 1.3em 0;
-}
-
-.l-hbox {
-    padding: 0 1.3em;
-}
-
-.l-centered {
-    text-align: center;
-}
-
-
-/* --------------------------
- * Header Module Styles
- * --------------------------
-*/
-.header {
-     min-height: 80px;
-     margin: 0;
-     color: #333;
-     padding: 1em;
-     text-align: center;
-     border-bottom: 1px solid #1f8dd6;
-/*     background: #fff;
-*/}
-    .header h1 {
-        margin: 0.2em 0;
-        font-size: 3em;
-        font-weight: 300;
-    }
-     .header h2 {
-         font-weight: 300;
-         margin: 0;
-         color: #ccc;
-     }
-
-
-
- /* --------------------------
-  * Content Module Styles
-  * --------------------------
- */
-
-/* The content div is placed as a wrapper around all the docs */
-.content {
-    margin: 0 auto;
-    width: 70%;
-    margin-bottom: 100px;
-}
-    .content p {
-        line-height: 1.6em;
-        font-size: 115%;
-    }
-
-    .content .content-subhead {
-        margin: 50px 0 20px 0;
-        font-weight: 300;
-        color: #888;
-    }
-
-    .content .content-spaced {
-        line-height: 1.8em;
-    }
-
-    /* A code snippet that has been syntax highlighted */
-    .content .snippet {
-        margin: 0;
-        padding: 1.3em;
-    }
-
-    .content .content-quote {
-        font-family: "Georgia", serif;
-        color: #666;
-        font-style: italic;
-        line-height: 1.8em;
-        border-left: 5px solid #ddd;
-        padding-left: 1.5em;
-    }
-
-
-
-/* --------------------------
- * Footer Module Styles
- * --------------------------
-*/
-.legal {
-    font-size: 80%;
-    border-top: 1px solid #eee;
-    padding: 0.5em 0;
-    background: rgb(250, 250, 250);
-}
-
-    .legal-license, .legal-copyright {
-        margin: 0;
-    }
-
-    .legal-copyright, .legal-links {
-        text-align: right;
-    }
-
-    .legal-links {
-        list-style: none;
-        margin: 0;
-    }
-
-    .legal-logo {
-        text-align: center;
-    }
-
-/* --------------------------
- * Main Navigation Bar Styles
- * --------------------------
-*/
-
-#menu {
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
-    position: fixed;
-    top: 0;
-    left: 150px;
-    bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
-    overflow-y: auto;
-    -webkit-overflow-scroll: touch;
-}
-    #menu a {
-        color: #999;
-        border: none;
-        white-space: normal;
-        padding: 0.6em 0 0.6em 0.6em;
-    }
-
-    #menu .pure-menu-open {
-        background: transparent;
-        border: 0;
-    }
-
-    #menu .pure-menu ul {
-        border: none;
-        background: transparent;
-    }
-
-    #menu .pure-menu ul,
-    #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
-    }
-
-        #menu .pure-menu li a:hover {
-            background: #333;
-        }
-
-    .pure-menu-link {
-        display: none; /* show this only on small screens */
-        top: 0;
-        left: 150px; /* "#menu width" */
-        background: #000;
-        background: rgba(0,0,0,0.7);
-        padding: 0.75em 1em;
-    }
-
-        .pure-menu-link:hover {
-            background: #000;
-        }
-
-    #menu .pure-menu-heading {
-        font-size:110%;
-        color: #fff;
-    }
-
-    #menu .pure-menu-selected {
-        background: #1f8dd6;
-    }
-
-        #menu .pure-menu-selected a {
-            color: white;
-        }
-
-        #menu li.pure-menu-selected a:hover {
-            background: none;
-        }
-
-
-.clearfix:before, :clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-.nav-bar {
-  @include bottom-margin;
-  box-sizing: border-box;
-  float: left;
-  list-style-type: none;
-  padding-left: 0;
-  width: 100%;
+.article-title {
+  display: inline-block;
+  font-size: 20px;
+  width:75%;
 }
 
 .bottom-decoration-container {
@@ -334,174 +92,14 @@ dd {
   width: 100%;
 }
 
-.nav-bar:before, .nav-bar:after {
-  content: "";
-  display: table;
-}
-
-.nav-bar:after {
-  clear: both;
-}
-
-.color {
-  display: inline-block;
-  line-height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  width: $nav-item-width;
-}
-
-.nav-bar__menu-link {
-  background: inherit;
-  color: white;
-  float: left;
-  line-height: 50px;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
-
-
-.blue {
-  background: #0e90d2;
-}
-
-.purple {
-  background: rgb(128, 88, 165);
-}
-
-.green {
-  background: #5eb95e;
-}
-
-.red {
-  background: #dd514c;
-}
-
-.orange {
-  background: $orange;
-}
-
-.yellow {
-  background: rgb(250, 210, 50);
-}
-
-#menu-icon {
- display: hidden;
- width: 40px;
- height: 40px;
- background: #4C8FEC url(../img/menu-icon.png) center;
-}
-
-/* ---------------------
- * Smaller Module Styles
- * ---------------------
-*/
-
-/* example code blocks */
-.example-snippet {
-    margin: 2em 0;
-    font-size: 85%;
-}
-
-/* green call to action button class */
-.notice {
-    background-color: #61B842;
-    color: white;
-}
-
-.pure-button {
-    font-family: inherit;
-    color: auto;
-}
-
-.muted {
-    color: #ccc;
-}
-
 /* --------------------------
- * Responsive Styles
+ * Element Styles
  * --------------------------
 */
 
-@media (max-width: 870px) {
-
-    /* Navigation Push Styles */
-    #layout {
-        position: relative;
-        padding-left: 0;
-    }
-        #layout.active {
-            position: relative;
-            left: 150px;
-        }
-
-            #layout.active #menu nav {
-                left: 150px;
-                width: 150px;
-            }
-
-    #menu {
-        left: 0;
-
-    }
-
-    .pure-menu-link {
-        position: fixed;
-        left: 0;
-        display: block;
-    }
-
-    #layout.active .pure-menu-link {
-        left: 150px;
-    }
-
-     .nav-bar {
-      height: auto;
-      display: block;
-    }
-
-    .nav-bar li {
-      display: block;
-      float: left;
-      width: 50%;
-    }
-
-    .nav-bar ul {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .nav-bar__menu-link {
-      width: 100%;
-      float: left;
-    }
-
-
-}
-
-@media (max-width: 767px) {
-
-    .content {
-      width: 95%;
-      font-size: 90%;
-    }
-
-    .legal-links {
-      padding:1em 0;
-    }
-    .legal-license, .legal-copyright, .legal-links, .legal-links li {
-      text-align: center;
-    }
-
-    /* normalize paddings on small screens*/
-    .l-hbox {
-      padding: 1.3em;
-    }
-
-
-
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
 }
 
 p {
@@ -520,117 +118,129 @@ p {
         color: $orange;
         font-weight: 100;
     }
-    .hero h2 {
-        font-weight: 100;
-        font-size: 260%;
-        margin: 0.02em 0 0.8em;
-        color: #666;
-    }
 
-.hero-cta pre {
-    font-size: 100%;
+/* --------------------------
+ * Layout Styles
+ * --------------------------
+*/
+
+#layout, #menu, .pure-menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
-a.pure-button-cta {
-    font-size: 120%;
-    background: #FCB94C;
-    color: white;
-    font-weight: bold;
+#layout {
+  padding-left: 150px; /* left col width "#menu" */
+  left: 0;
 }
 
-.size-chart {
-    width: 100%;
+#main {
+  margin-bottom: $footer-height;
+  width: 100%;
 }
 
-    .size-chart-item {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    .size-chart-base {
-        background: #0e90d2;
-    }
-        .size-chart-base span {
-            color: rgb(103, 194, 240);
-        }
-
-    .size-chart-grids {
-        background: rgb(128, 88, 165);
-    }
-        .size-chart-grids span {
-            color: rgb(200, 131, 255);
-        }
-    .size-chart-forms {
-        background: #5eb95e;
-    }
-
-        .size-chart-forms span {
-            color: rgb(161, 240, 137);
-        }
-
-    .size-chart-buttons {
-        background: #dd514c;
-    }
-
-        .size-chart-buttons span {
-            color: rgb(236, 164, 154);
-        }
-
-    .size-chart-menus {
-        background: rgb(250, 210, 50);
-    }
-        .size-chart-menus span {
-            color: rgb(255, 240, 134);
-        }
-    .size-chart-tables {
-        background: rgb(243, 123, 29);
-    }
-        .size-chart-tables span {
-            color: rgb(255, 190, 129);
-        }
-
-    a.size-chart-label {
-        display: block;
-        color: #fff;
-        height: 40px;
-        padding: 0.5em;
-        text-decoration: none;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    .size-chart-size {
-        display: block;
-    }
-
-.marketing-ribbon {
-    // border-bottom: 1px solid #eee;
-    padding: 1em 0;
+.l-box {
+    padding: 1.3em;
 }
 
-    .marketing-ribbon h3 {
-        font-size: 1.47em;
-        font-weight: normal;
+/* --------------------------
+ * Header Module Styles
+ * --------------------------
+*/
+
+.header {
+     min-height: 80px;
+     margin: 0;
+     color: #333;
+     padding: 1em;
+     text-align: center;
+     border-bottom: 1px solid #1f8dd6;
+}
+
+ /* --------------------------
+  * Content Module Styles
+  * --------------------------
+ */
+
+.content {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 100px;
+}
+    .content p {
+        line-height: 1.6em;
+        font-size: 115%;
     }
 
-@media only screen and (max-width : 480px) {
-    .nav-bar {
-      border-bottom: 0;
-      display: block;
+/* --------------------------
+ * Footer Module Styles
+ * --------------------------
+*/
+
+.legal {
+    font-size: 80%;
+    border-top: 1px solid #eee;
+    padding: 0.5em 0;
+    background: rgb(250, 250, 250);
+}
+
+    .legal-license, .legal-copyright {
+        margin: 0;
     }
 
-    .nav-bar li {
-      width: 100%;
-
+    .legal-copyright, .legal-links {
+        text-align: right;
     }
 
-    .nav-bar__menu-link {
-      width: inherit;
+.footer {
+  background: gray;
+  bottom: 0;
+  color: white;
+  height: $footer-height;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
 
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 870px) {
+
+    #layout {
+        position: relative;
+        padding-left: 0;
+    }
+        #layout.active {
+            position: relative;
+            left: 150px;
+        }
+
+            #layout.active #menu nav {
+                left: 150px;
+                width: 150px;
+            }
+
+    #layout.active .pure-menu-link {
+        left: 150px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .content {
+      width: 95%;
+      font-size: 90%;
     }
 
+    .legal-license, .legal-copyright li {
+      text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -642,94 +252,7 @@ a.pure-button-cta {
             font-size: 250%;
             font-weight: 300; /* slightly thicker to compensate for font-size */
         }
-        .hero h2 {
-            font-size: 165%;
-        }
-
-    /* by default l-hbox becomes padding: 1.3em; at <= 767px. However, this makes the heading
-    too far away from the content, so adding this in here. */
-    h3.l-hbox,
     p.l-hbox {
         padding: 0 1.3em;
     }
-
-    a.size-chart-label {
-        font-size: 0.75em;
-        padding: 0.6667em;
-    }
-}
-
-/*
- * Baby Blue theme for RainbowJS
- *
- * @author tilomitra
- */
-
-pre {
-    word-wrap: break-word;
-    padding: 6px 10;
-    line-height: 1.3em;
-    margin-bottom: 20;
-    border: 1px solid #eee;
-}
-
-code {
-    border: none;
-    margin: 0 2px;
-    font-size: 0.8em;
-    padding: 0.4em 0.6em;
-}
-
-pre code {
-    padding: 0;
-    margin: 0;
-    font-size: 0.95em;
-}
-
-pre, code {
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
-    color: #333;
-    background: rgb(250, 250, 250);
-}
-
-
-pre .comment {
-    color: #999;
-}
-
-
-pre .tag, pre .tag-name, pre .support.tag-name {
-    color: rgb(85, 85, 85);
-}
-
-pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
-    font-weight: bold;
-}
-
-pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
-    color: #333;
-}
-
-pre .constant.numeric, pre .keyword.unit, pre .hex-color {
-    font-weight: normal;
-    color: #099;
-}
-
-pre .attribute, pre .variable, pre .support {
-    color:  #757575; /* skinbuilder block-page-text-normal with #1f8dd6 as primary */
-}
-
-pre .string, pre .support.value  {
-    font-weight: normal;
-    color: #3b8bba; /* skinbuilder block-mine-text-low with #1f8dd6 as primary */
-}
-
-.footer {
-  background: gray;
-  bottom: 0;
-  color: white;
-  height: $footer-height;
-  position: fixed;
-  width: 100%;
-  z-index: -1;
 }
