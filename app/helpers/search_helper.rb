@@ -5,7 +5,7 @@ module SearchHelper
 
     cattr_accessor :articles
 
-    URL = 'http://www.reddit.com/r/subreddits/search.json?q=cats'
+    URL = 'https://www.reddit.com/r/subreddits/search.json?q=aww'
 
     def self.getArticles
       articles = self.make_article_array
